@@ -9,12 +9,12 @@ import { PostService } from '../services/post.service';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-  http : HttpClient;
-  url = "https://jsonplaceholder.typicode.com/posts";
+  http: HttpClient;
+  url = 'https://jsonplaceholder.typicode.com/posts';
   posts: any[];
 
-  constructor(http : HttpClient, private postService: PostService) {
-    this.http = http;    
+  constructor(http: HttpClient, private postService: PostService) {
+    this.http = http;
 
     this.http.get(this.url).subscribe(Response => {
       this.posts = Response as any[];
@@ -24,18 +24,18 @@ export class PostsComponent implements OnInit {
   ngOnInit() {
   }
 
-  createPost(inputField : HTMLInputElement) {
-    if(!inputField.value){
+  createPost(inputField: HTMLInputElement) {
+    if (!inputField.value) {
       return;
     }
 
-    let post = { userId: 1, title: inputField.value, body: "new post"}
+    const post = { userId: 1, title: inputField.value, body: 'new post'};
     this.postService.create(post).subscribe(respone => {
       this.posts.unshift(respone);
-    })      
+    });
   }
 
-  updatePost(post){
+  updatePost(post) {
     this.http.put(`${this.url}/${post.id}`, post).subscribe(respone => {
       console.log(respone);
     });

@@ -9,7 +9,7 @@ import { throwError } from 'rxjs';
 })
 export class PostService {
 
-  private url: string = "https://jsonplaceholder.typicode.com/posts";
+  private url = 'https://jsonplaceholder.typicode.com/posts';
 
   constructor(private http: HttpClient) { }
 

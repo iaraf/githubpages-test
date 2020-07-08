@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 export interface Category {
-  id : number,
-  name : string
+  id: number;
+  name: string;
 }
 
 @Component({
@@ -12,9 +12,9 @@ export interface Category {
 })
 export class CourseFormComponent {
 
-  categories : Category[] = [{ id: 1, name: "Art" },{ id: 2, name: "Technology" }, { id: 3, name: "Marketing" }];
+  categories: Category[] = [{ id: 1, name: 'Art' }, { id: 2, name: 'Technology' }, { id: 3, name: 'Marketing' }];
 
-  submit(form){
+  submit(form) {
     console.log(form.value);
   }
 }

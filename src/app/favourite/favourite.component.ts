@@ -9,7 +9,7 @@ export class FavouriteComponent {
   isActive: boolean;
   constructor() { }
 
-  toggleFave(){
+  toggleFave() {
     this.isActive = !this.isActive;
   }
 

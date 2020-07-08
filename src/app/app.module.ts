@@ -3,7 +3,7 @@ import { AppErrorHandler } from './common/app-error-handler';
 import { AuthorsService } from './services/authors.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -45,13 +45,13 @@ import { NotFoundComponent } from './not-found/not-found.component';
     RouterModule.forRoot([
       { path: '', component: AppComponent },
       { path: 'blog', component: BlogDateComponent },
-      { path: 'blog/:year/:month', component: BlogListComponent }, 
-      { path: '**', component: NotFoundComponent }    
+      { path: 'blog/:year/:month', component: BlogListComponent },
+      { path: '**', component: NotFoundComponent }
 
     ])
   ],
   providers: [
-    AuthorsService, 
+    AuthorsService,
     PostService,
     GithubService,
     { provide: ErrorHandler, useClass: AppErrorHandler }

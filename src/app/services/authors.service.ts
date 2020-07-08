@@ -7,7 +7,7 @@ export class AuthorsService {
 
   constructor() { }
 
-  getAuthors(){
-    return ["James","Jeremy","Janice","Oswaldo","Sophia","Ethol"];
+  getAuthors() {
+    return ['James', 'Jeremy', 'Janice', 'Oswaldo', 'Sophia', 'Ethol'];
   }
 }

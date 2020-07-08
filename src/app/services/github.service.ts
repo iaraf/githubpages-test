@@ -9,15 +9,15 @@ import { AppError } from '../common/app.error';
 })
 export class GithubService {
 
-  url: string = "https://api.github.com/users/mosh-hamedani/followers";
+  url = 'https://api.github.com/users/mosh-hamedani/followers';
   constructor(private http: HttpClient) { }
 
-  getFollowers(){
+  getFollowers() {
     return this.http.get(this.url)
       .pipe(catchError(this.errorHandler));
   }
 
-  errorHandler(error : HttpErrorResponse) {
+  errorHandler(error: HttpErrorResponse) {
     return throwError(new AppError(error.message, error.status));
   }
 }

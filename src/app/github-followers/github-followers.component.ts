@@ -15,12 +15,13 @@ export class GithubFollowersComponent implements OnInit {
   ngOnInit() {
     this.gitHub.getFollowers()
       .subscribe(response => {
-        this.followers = response as any[]; 
+        this.followers = response as any[];
         console.log(response);
       }, (err: AppError) => {
-        if(err.status == 404)
-          alert("User was not found.");
-      })
+        if (err.status === 404) {
+          alert('User was not found.');
+        }
+      });
   }
 
 }

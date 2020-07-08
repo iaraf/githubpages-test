@@ -11,8 +11,8 @@ export class AuthorsComponent implements OnInit {
 
   authors: string[];
 
-  constructor(private authorsService : AuthorsService) { 
-    
+  constructor(private authorsService: AuthorsService) {
+
   }
 
   ngOnInit() {

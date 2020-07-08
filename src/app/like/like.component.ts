@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 interface LikeChangeEventArge {
-  Liked : boolean;
-  Likes : number;
+  Liked: boolean;
+  Likes: number;
 }
 
 @Component({
@@ -14,17 +14,16 @@ export class LikeComponent {
 
   @Input('likes') likes: number;
   @Input('isLiked') isLiked: boolean;
-  @Output('change') change = new EventEmitter();
+  @Output() likeChange = new EventEmitter();
 
-  toggleLiked(){
+  toggleLiked() {
     this.likes += this.isLiked ? -1 : 1;
     this.isLiked = !this.isLiked;
-    let eventArgs : LikeChangeEventArge = 
-    { 
+    const eventArgs: LikeChangeEventArge = {
       Likes: this.likes,
-      Liked: this.isLiked    
-    } 
-    this.change.emit(eventArgs);
+      Liked: this.isLiked
+    };
+    this.likeChange.emit(eventArgs);
   }
 
 }

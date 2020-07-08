@@ -7,9 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class ZippyComponent {
   @Input('title') title: string;
-  isCollapsed: boolean = true;
+  isCollapsed = true;
 
-  toggleContent(){
+  toggleContent() {
     this.isCollapsed = !this.isCollapsed;
   }
 }
