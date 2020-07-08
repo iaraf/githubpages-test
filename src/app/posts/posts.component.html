@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="form-group">
+        <input type="text" class="form-control" (keyup.enter)="createPost($event.target)"/>
+    </div>
+    <ul>
+        <li *ngFor="let post of posts">
+            {{ post.title }}
+            <button class="btn btn-default btn-sm"
+                    (click)="updatePost(post)">
+                Update
+            </button>
+        </li>
+    </ul>
+</div>
+

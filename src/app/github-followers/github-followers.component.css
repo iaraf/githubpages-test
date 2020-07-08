@@ -1,0 +1,40 @@
+.follower-card {
+   background: linear-gradient()
+}
+
+.follower-img-container {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    z-index: 2;
+    overflow: hidden;
+    -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.35);
+    box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.35);
+    border: 4px solid lightcoral;
+}
+
+.follower-img {
+    height: 80px;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.follower-details-container {
+    display: inline;
+}
+
+.follower-name {
+    position: relative;
+    top: -70px;
+    right: -15%;
+}
+
+.follower-link {
+    position: relative;
+    top: -70px;
+    right: -15%;
+}
+

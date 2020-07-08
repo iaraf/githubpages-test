@@ -1,0 +1,7 @@
+<div>
+    <i class="fas fa-heart"
+        (click)="toggleLiked()"
+        [style.color]="isLiked ? 'deeppink' : '#aaa'">
+    </i>
+    <label [textContent]="likes" class="ml-1"></label>
+</div>
