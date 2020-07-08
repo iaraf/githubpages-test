@@ -45,6 +45,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     RouterModule.forRoot([
       { path: '', component: BlogDateComponent },
       { path: 'blog/:year/:month', component: BlogListComponent },
+      { path: 'followers', component: GithubFollowersComponent },
       { path: '**', component: NotFoundComponent }
 
     ])
