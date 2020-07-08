@@ -43,8 +43,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: '', component: AppComponent },
-      { path: 'blog', component: BlogDateComponent },
+      { path: '', component: BlogDateComponent },
       { path: 'blog/:year/:month', component: BlogListComponent },
       { path: '**', component: NotFoundComponent }
 
